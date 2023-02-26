@@ -1,0 +1,9 @@
+__pychace__/
+data/stocks/
+.venv/
+venv/
+ENV/
+env/
+*.log
+.DS_store
+*.pyc
