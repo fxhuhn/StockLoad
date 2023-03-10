@@ -3,10 +3,10 @@ import numpy as np
 
 def trading_range(price_data : pd.DataFrame) -> pd.DataFrame:
     
-    if 'long_Range' not in price_data.columns:
-        price_data['Long_Range'] = np.nan
-    if 'short_Range' not in price_data.columns:
-        price_data['Short_Range'] = np.nan
+    if 'Long_Range' not in price_data.columns:
+        price_data['Long_Range'] = pd.Series(dtype='object')  #np.nan
+    if 'Short_Range' not in price_data.columns:
+        price_data['Short_Range'] = pd.Series(dtype='object')  #np.nan
 
     #long range
     for i, row in price_data[(price_data[f'Long_Range'].isna())].iterrows():
